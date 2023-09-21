@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MLobbyWindow</class>
+ <widget class="QMainWindow" name="MLobbyWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="buttonPage" native="true">
+    <property name="geometry">
+     <rect>
+      <x>-1</x>
+      <y>-1</y>
+      <width>98</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="MPushButton" name="info">
+       <property name="text">
+        <string>ИНФО</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="MPushButton" name="first">
+       <property name="text">
+        <string>Ввод</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="MPushButton" name="second">
+       <property name="text">
+        <string>Вывод</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="MPushButton" name="clear">
+       <property name="text">
+        <string>Очистка</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="MPushButton" name="exit">
+       <property name="text">
+        <string>Выход</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="masterPage" native="true">
+    <property name="geometry">
+     <rect>
+      <x>99</x>
+      <y>-1</y>
+      <width>701</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <widget class="MInfoPage" name="infoPage" native="true">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>1</x>
+       <y>1</y>
+       <width>681</width>
+       <height>561</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Алгоритм хеширования Tiger</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_4">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Tiger -  криптографическая хеш-функция, разработанная Росом Андерсоном и Эли Бихамом в 1995 году.</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_5">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Tiger был предназначен для особенно быстрого выполнения на 64-разрядных компьютерах. Tiger не имеет патентных ограничений, может использоваться свободно как с эталонной реализацией, так и с её модификациями. Размер значения хеша — 192 бита (Tiger/192), хотя имеются также более короткие версии для совместимости с SHA-1 (Tiger/160) и с MD4, MD5, RIPEMD, Snefru (Tiger/128). Скорость работы — 132 Мбит/с (проверено на одном процессоре Alpha 7000, модель 660). На современных процессорах значительно быстрее (даже при тесте на 32-битном AMD Sempron 3000+ скорость около 225 Мбит/с).</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_6">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string> Основными целями при разработке Tiger были:
+1) безопасность;
+2) быстрая работа на новых 64-битных процессорах при разумной скорости на 32-битных;
+3) замена по возможности серий MD и SHA.</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_7">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Хеш-функция Tiger имеет несколько интересных свойств, которые делают ее привлекательной для использования в некоторых приложениях. Например:
+1) Она обладает хорошей универсальностью хеширования, что означает, что ее выходной хеш равномерно распределяется по всему диапазону значений.
+2) Она способна работать с очень большими файлами или сообщениями, так как использует блочный режим работы, что позволяет разбить входные данные на блоки фиксированного размера и обрабатывать их поочередно.
+3) Она может быть эффективно реализована в аппаратном и программном обеспечении, что делает ее подходящей для использования на различных платформах и в различных приложениях.
+4) Она обладает хорошей скоростью хеширования, что является важным фактором при обработке больших объемов данных.
+Несмотря на все эти преимущества, хеш-функция Tiger не рекомендуется для использования в новых проектах, так как она считается устаревшей и имеет известные уязвимости. Рекомендуется использовать более современные хеш-функции, такие как SHA-3 или BLAKE2, которые обеспечивают более высокую безопасность данных.</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="MSecondPage" name="secondPage" native="true">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>1</x>
+       <y>1</y>
+       <width>681</width>
+       <height>561</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QWidget" name="widget" native="true">
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <spacer name="horizontalSpacer_5">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="Hashing">
+           <property name="text">
+            <string>Start Hashing</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_6">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="widget_2" native="true">
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QTextEdit" name="textEdit">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="MFirstPage" name="firstPage" native="true">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>1</x>
+       <y>1</y>
+       <width>681</width>
+       <height>561</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>681</width>
+       <height>0</height>
+      </size>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Введите сообщение или откройте файл с текстом, который желаете зашифровать</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="openFile">
+        <property name="text">
+         <string>Open TXT File</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextEdit" name="textRef"/>
+      </item>
+      <item>
+       <widget class="QWidget" name="buttons" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>20</height>
+         </size>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="saveButton">
+           <property name="text">
+            <string>Save</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="closeButton">
+           <property name="text">
+            <string>Close</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Введите ключ для хеширофания</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextEdit" name="textKey">
+        <property name="markdown">
+         <string/>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MPushButton</class>
+   <extends>QPushButton</extends>
+   <header>mpushbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>MFirstPage</class>
+   <extends>QWidget</extends>
+   <header>mfirstpage.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MSecondPage</class>
+   <extends>QWidget</extends>
+   <header>msecondpage.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MInfoPage</class>
+   <extends>QWidget</extends>
+   <header>minfopage.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
